@@ -1,10 +1,10 @@
-# Words
+## Random Doggies React
+
+get
 
 ## PRE- REQUIREMENTS:
 
 # node v16
-
-In the project directory, you can run:
 
 ## INSTALL dependencies
 
