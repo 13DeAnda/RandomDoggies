@@ -1,0 +1,22 @@
+.mainDog {
+    text-align: center;
+    width: 400px;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.links {
+    overflow: auto;
+    white-space: nowrap;
+    height: 300px;
+}
+.link {
+    background: blanchedalmond;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    padding: 20px;
+    width: 150px;
+    height: 220px;
+    padding-right: 30px;
+}

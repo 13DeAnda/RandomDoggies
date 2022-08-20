@@ -1,0 +1,8 @@
+.image {
+    width: inherit;
+}
+.title {
+    font-weight: bolder;
+    font-size: 16px;
+    text-transform: capitalize;
+}

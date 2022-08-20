@@ -1,0 +1,10 @@
+.App {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Container {
+    padding: 10px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    text-align: center;
+}
