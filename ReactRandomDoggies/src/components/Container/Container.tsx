@@ -54,7 +54,9 @@ export default function Container() {
                             className="link"
                             key={`dogImage_4${index}`}
                             sx={{ maxWidth: 345 }}
-                            onClick={() => getSpecificDog(dog.image)}
+                            onClick={(e: any) => {
+                                getSpecificDog(dog.image);
+                            }}
                         >
                             <ImageDisplayer dog={dog} />
                         </Card>
