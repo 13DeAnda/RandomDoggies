@@ -1,0 +1,10 @@
+## install
+
+`npm install`
+
+## run
+
+`npm run build`
+`npm run start`
+
+### you can view : http://localhost:1234/

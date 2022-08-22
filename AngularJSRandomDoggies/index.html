@@ -1,0 +1,28 @@
+<head>
+    <title>Random Doggies</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body ng-app="scopeExample">
+    
+    <div ng-controller="MyController" class="container">
+      <h1>Random Dogs!</h1>
+      <div class="mainDog">
+        <image-displayer dog="mainDog" main="true"></image-displayer>
+      </div>
+      <div class="links">
+        <div class="link" ng-repeat="dog in linkDogs">
+          <div class="card">
+            <image-displayer dog="dog"></image-displayer>
+          </div>
+          
+        </div>
+      </div>
+      
+
+    </div>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="src/index.js"></script>
+  </body>
+</html>
