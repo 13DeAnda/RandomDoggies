@@ -6,6 +6,7 @@ app.controller("MyController", [
   ($scope, $http) => {
     $scope.mainDog = null;
     $scope.linkDogs = [];
+
     $scope.getDogs = function (quantity) {
       $scope.gameOver = false;
       var path = `https://dog.ceo/api/breeds/image/random/${quantity}`;
@@ -33,6 +34,7 @@ app.controller("MyController", [
     };
 
     $scope.getDogs(1);
+    $scope.getDogs(10);
   },
 ]);
 
@@ -41,7 +43,14 @@ app.directive("imageDisplayer", function () {
   function controller($scope, $timeout, $http) {}
   return {
     restrict: "E",
-    template: "<div>hello</div>",
-    scope: {},
+    template: `
+                  <img ng-src="{{dog.image}}" class="image" />
+                  <div class="title" ng-if="!main">
+                    <a href={{dog.image}} target="_blank" rel="noopener noreferrer">
+                    {{dog.breed}}
+                    </a>
+                  </div>
+                `,
+    scope: { dog: "=", main: "=" },
   };
 });

@@ -172,6 +172,7 @@ app.controller("MyController", ["$scope", "$http", function ($scope, $http) {
   };
 
   $scope.getDogs(1);
+  $scope.getDogs(10);
 }]);
 app.directive("imageDisplayer", function () {
   function linkingFunction() {}
@@ -180,8 +181,11 @@ app.directive("imageDisplayer", function () {
 
   return {
     restrict: "E",
-    template: "<div>hello</div>",
-    scope: {}
+    template: "\n                  <img ng-src=\"{{dog.image}}\" class=\"image\" />\n                  <div class=\"title\" ng-if=\"!main\">\n                    <a href={{dog.image}} target=\"_blank\" rel=\"noopener noreferrer\">\n                    {{dog.breed}}\n                    </a>\n                  </div>\n                ",
+    scope: {
+      dog: "=",
+      main: "="
+    }
   };
 });
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -212,7 +216,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58809" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59116" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

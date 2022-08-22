@@ -9,13 +9,17 @@
     <div ng-controller="MyController" class="container">
       <h1>Random Dogs!</h1>
       <div class="mainDog">
-        <div class="image">
-          <img ng-src="{{mainDog.image}}" class="image" />
-          <div class="title">{{mainDog.breed}}</div>
-        </div>
-
+        <image-displayer dog="mainDog" main="true"></image-displayer>
       </div>
-      <image-displayer></image-displayer>
+      <div class="links">
+        <div class="link" ng-repeat="dog in linkDogs">
+          <div class="card">
+            <image-displayer dog="dog"></image-displayer>
+          </div>
+          
+        </div>
+      </div>
+      
 
     </div>
     <script src="node_modules/angular/angular.min.js"></script>
